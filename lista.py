@@ -30,10 +30,13 @@ while True:
             print(*item) 
 
     elif tarefas == 3:
-        escolher_item = input("Qual tarefa foi concluída?: ")
-        for item in lista:
-            if item == escolher_item:
-                print(f" {escolher_item}")
+        indice = 0
+        for item in tarefas:
+            print(f"{indice} {item}")
+            indice += 1
+        escolher_item = int(input("Qual o índice da tarefa foi concluída?: "))
+        tarefas[escolher_item] = "[X]" + tarefas[escolher_item]
+        print("Concluído!")
 
     elif tarefas == 4:
         for item in lista:
