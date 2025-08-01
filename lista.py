@@ -27,24 +27,26 @@ while True:
 
     elif tarefas == 2:
         for item in lista:
-            print(*item) 
+            print(item) 
 
     elif tarefas == 3:
         indice = 0
-        for item in tarefas:
+        for item in lista:
             print(f"{indice} {item}")
             indice += 1
-        escolher_item = int(input("Qual o índice da tarefa foi concluída?: "))
-        tarefas[escolher_item] = "[X]" + tarefas[escolher_item]
+        c = int(input("Qual o índice da tarefa foi concluída?: "))
+        lista[c] ="(✗)" + lista[c]
         print("Concluído!")
 
     elif tarefas == 4:
         for item in lista:
-            print(item)
-        escolher_item = input("Qual tarefa você quer excluir?: ")
-        lista.remove(escolher_item)
-                
-
+            print(lista)
+        c = input("Qual tarefa você quer excluir?: ")
+        lista.remove(c)
+        for item in lista:
+            print(lista)
+        
+            
     elif tarefas == 0:
         print("Até mais!")
         break             
