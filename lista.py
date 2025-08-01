@@ -40,11 +40,11 @@ while True:
 
     elif tarefas == 4:
         for item in lista:
-            print(lista)
+            print(item)
         c = input("Qual tarefa você quer excluir?: ")
         lista.remove(c)
         for item in lista:
-            print(lista)
+            print(item)
         
             
     elif tarefas == 0:
